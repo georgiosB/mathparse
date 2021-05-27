@@ -7,7 +7,7 @@ func NewParser(expression string) Parser {
 }
 
 func (p *Parser) FoundResult() bool {
-	return len(p.tokens) <= 1 && p.tokens[0].Type == literal
+	return len(p.tokens) == 1 && p.tokens[0].Type == literal
 }
 
 func (p *Parser) GetValueResult() float64 {
